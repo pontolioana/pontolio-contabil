@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Pontolio | Contabilidade Estratégica e Inovadora</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #020813;
+            --bg-blue: #071a3d;
+            --bg-light-blue: #123068;
+            --accent-gold: #fbbc04; /* Tom de amarelo/dourado das imagens */
+            --text-white: #ffffff;
+            --text-gray: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            /* Fundo com gradiente simulando o efeito espacial/digital das imagens */
+            background: radial-gradient(circle at top right, var(--bg-light-blue), var(--bg-blue), var(--bg-dark));
+            background-attachment: fixed;
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        /* Container padrão */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* CABEÇALHO / HERO SECTION */
+        header {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .logo-name {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-white);
+            letter-spacing: -1px;
+            margin-bottom: -5px;
+        }
+
+        .logo-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px 80px;
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            color: var(--text-white);
+        }
+
+        .domain-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(251, 188, 4, 0.3);
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 30px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* SERVIÇOS ESTRATÉGICOS */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-bottom: 80px;
+        }
+
+        .service-item {
+            background: rgba(18, 48, 104, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            background: rgba(18, 48, 104, 0.8);
+            border-color: rgba(251, 188, 4, 0.5);
+        }
+
+        .service-item::before {
+            content: "■";
+            color: var(--text-white);
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+
+        /* SERVIÇOS INOVADORES */
+        .innovative-section {
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 2px solid var(--accent-gold);
+            border-bottom: 2px solid var(--accent-gold);
+            padding: 80px 0;
+        }
+
+        .innovative-list {
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .innovative-list li {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 4px solid var(--accent-gold);
+            border-radius: 4px;
+            color: var(--text-gray);
+            transition: color 0.3s;
+        }
+
+        .innovative-list li:hover {
+            color: var(--accent-gold);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .innovative-list li span {
+            color: var(--accent-gold);
+            font-weight: 800;
+            margin-right: 10px;
+            font-size: 1.4rem;
+        }
+
+        /* CTA E RODAPÉ */
+        .cta-section {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--bg-dark);
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 800;
+            padding: 15px 40px;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(251, 188, 4, 0.3);
+        }
+
+        footer {
+            background: var(--bg-dark);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-contact {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-white);
+        }
+
+        .footer-contact a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-contact a:hover {
+            opacity: 0.8;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .logo-name { font-size: 2.2rem; }
+            .logo-title { font-size: 1.2rem; }
+            .hero h2 { font-size: 1.6rem; }
+            .section-title { font-size: 1.6rem; }
+            .innovative-list li { font-size: 1.1rem; }
+            .footer-contact { font-size: 1.1rem; display: flex; flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container">
+        <div class="logo-name">Ana Pontolio</div>
+        <div class="logo-title">CONTADORA</div>
+    </header>
+
+    <section class="hero container">
+        <div class="domain-tag">www.pontoliocontabil.com.br</div>
+        <h2>Inteligência, segurança e inovação para a gestão financeira e tributária do seu negócio.</h2>
+        <br>
+        <a href="https://wa.me/5516992814541" target="_blank" class="cta-button">Falar com a Ana</a>
+    </section>
+
+    <section class="container">
+        <h2 class="section-title">Serviços Contábeis Estratégicos</h2>
+        <div class="services-grid">
+            <div class="service-item">Planejamento Tributário Estratégico</div>
+            <div class="service-item">Análise de Indicadores Financeiros</div>
+            <div class="service-item">Gestão e Apuração de Impostos (Simples, Lucro Presumido, Real)</div>
+            <div class="service-item">Consultoria Financeira e de Custos</div>
+            <div class="service-item">Abertura, Alteração e Regularização de Empresas</div>
+            <div class="service-item">Contabilidade Digital e Integrada com Sistemas</div>
+            <div class="service-item">Escrituração Contábil e Fiscal Inteligente</div>
+            <div class="service-item">Defesa e Regularização Fiscal junto à Receita e SEFAZ</div>
+            <div class="service-item">Elaboração de Balanço Patrimonial e Demonstrações Financeiras</div>
+            <div class="service-item">Assessoria para MEIs e Pequenos Negócios</div>
+            <div class="service-item">Consultoria Trabalhista e Folha de Pagamento</div>
+            <div class="service-item">Planejamento Sucessório e Holding Familiar</div>
+            <div class="service-item">Educação Financeira e Contábil para Clientes</div>
+            <div class="service-item">Automatização de Processos Contábeis</div>
+            <div class="service-item">Atendimento Consultivo e Personalizado</div>
+        </div>
+    </section>
+
+    <section class="innovative-section">
+        <div class="container">
+            <h2 class="section-title">+5 Serviços Contábeis Inovadores</h2>
+            <ul class="innovative-list">
+                <li><span>1.</span> Auditoria de Recebíveis em Maquininhas de Cartão</li>
+                <li><span>2.</span> Recuperação Tributária Inteligente</li>
+                <li><span>3.</span> Planejamento Tributário Preventivo e Reativo</li>
+                <li><span>4.</span> Saneamento de Cadastro de Produtos (NCM, CST, CFOP etc.)</li>
+                <li><span>5.</span> Integração Contábil com Marketplaces e Plataformas Online</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="cta-section container">
+        <h2 style="font-size: 2rem; margin-bottom: 20px;">Pronto para transformar sua empresa?</h2>
+        <p style="color: var(--text-gray); margin-bottom: 30px;">Agende uma consultoria e descubra como podemos ajudar o seu negócio a crescer com segurança.</p>
+        <a href="https://wa.me/5516992814541" target="_blank" class="cta-button">Entrar em Contato Agora</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-contact">
+                Fale conosco em <a href="tel:+5516992814541">(16) 99281-4541</a> | <a href="mailto:pontolioana@gmail.com">pontolioana@gmail.com</a>
+            </div>
+            <p style="margin-top: 20px; color: var(--text-gray); font-size: 0.9rem;">
+                &copy; 2026 Ana Pontolio - Contadora. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
